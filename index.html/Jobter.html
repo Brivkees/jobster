@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer and Job Seeker Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Jobster</h1>
+        <p>Select your portal: Employer or Job Seeker</p>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="#employer">For Employers</a> |
+            <a href="#job-seeker">For Job Seekers</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Employer Section -->
+        <section id="employer">
+            <h2>Employer Portal</h2>
+            <p>Welcome employers! Here you can manage job postings, search for candidates, and more.</p>
+            <button onclick="alert('This is the Employer section. Features coming soon!')">Get Started as Employer</button>
+        </section>
+
+        <hr>
+
+        <!-- Job Seeker Section -->
+        <section id="job-seeker">
+            <h2>Job Seeker Portal</h2>
+            <p>Looking for your next opportunity? Here, job seekers can find jobs, apply, and create profiles.</p>
+            <button onclick="alert('This is the Job Seeker section. Features coming soon!')">Get Started as Job Seeker</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jobster. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Example of what you can do with JavaScript, customize as needed
+        document.querySelector('#employer button').addEventListener('click', function() {
+            window.location.href = "employer-dashboard.html";  // Placeholder for future employer page
+        });
+
+        document.querySelector('#job-seeker button').addEventListener('click', function() {
+            window.location.href = "job-seeker-dashboard.html";  // Placeholder for future job seeker page
+        });
+    </script>
+</body>
+</html>

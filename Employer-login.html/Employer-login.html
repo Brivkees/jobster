@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Login/Signup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Employer Login / Signup</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Login</h2>
+            <form action="login-action" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br><br>
+
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Sign Up</h2>
+            <form action="signup-action" method="post">
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="signup-email" required><br><br>
+
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="signup-password" required><br><br>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Jobster. All rights reserved.</p>
+    </footer>
+</body>
+</html>

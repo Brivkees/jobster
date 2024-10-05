@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Employer Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Create Employer Profile</h1>
+    </header>
+    
+    <main>
+        <form id="employer-profile-form" action="submit-profile" method="POST" enctype="multipart/form-data">
+            <!-- Company Name -->
+            <label for="company-name">Company Name:</label>
+            <input type="text" id="company-name" name="company-name" required><br><br>
+
+            <!-- Address -->
+            <label for="address">Company Address:</label>
+            <textarea id="address" name="address" rows="3" required></textarea><br><br>
+
+            <!-- Industry -->
+            <label for="industry">Industry:</label>
+            <input type="text" id="industry" name="industry" required><br><br>
+
+            <!-- Company Logo -->
+            <label for="logo">Company Logo:</label>
+            <input type="file" id="logo" name="logo" accept="image/*" required><br><br>
+
+            <!-- Number of Employees -->
+            <label for="num-employees">Number of Employees:</label>
+            <input type="number" id="num-employees" name="num-employees" required><br><br>
+
+            <!-- Company Description -->
+            <label for="description">Company Description:</label>
+            <textarea id="description" name="description" rows="5" required></textarea><br><br>
+
+            <!-- Submit Button -->
+            <button type="submit">Create Profile</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Jobster. All rights reserved.</p>
+    </footer>
+</body>
+</html>
