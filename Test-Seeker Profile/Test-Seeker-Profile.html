@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Profile - Benjamin Rivkees</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="email"], input[type="file"], textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0 15px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="file"] {
+            padding: 5px;
+        }
+        button {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .profile-pic {
+            text-align: center;
+        }
+        img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Job Seeker Profile</h1>
+    
+    <div class="profile-pic">
+        <label for="profile-pic">Profile Picture:</label><br>
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" id="profile-image"><br><br>
+        <input type="file" id="profile-pic" accept="image/*" onchange="loadImage(event)">
+    </div>
+
+    <h2>Personal Information</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" value="Benjamin Rivkees" readonly><br>
+
+    <label for="location">Location:</label>
+    <input type="text" id="location" value="New York, NY" readonly><br>
+
+    <label for="relocate">Willing to Relocate:</label>
+    <input type="checkbox" id="relocate" checked disabled><br><br>
+
+    <label for="contact">Contact Information:</label>
+    <input type="email" id="contact" value="benjamin.rivkees@example.com" readonly><br>
+
+    <h2>About</h2>
+    <textarea id="about" rows="4" readonly>Experienced Regional Sales Manager with a demonstrated history of working in the machinery industry. Skilled in Sales, Lean Management, Aerospace Manufacturing, and CNC Manufacturing. Strong sales professional with a Bachelor's Degree focused on Economics and Finance from the University of Hartford.</textarea>
+
+    <h2>Experience</h2>
+    <label for="title">Title:</label>
+    <input type="text" id="title" value="Director of Business Development" readonly><br>
+
+    <label for="employment-type">Employment Type:</label>
+    <input type="text" id="employment-type" value="Full-Time" readonly><br>
+
+    <label for="company">Company Name:</label>
+    <input type="text" id="company" value="Utron Systems Inc." readonly><br>
+
+    <label for="location">Location:</label>
+    <input type="text" id="company-location" value="New York, NY" readonly><br>
+
+    <label for="start-date">Start Date:</label>
+    <input type="text" id="start-date" value="January 2019" readonly><br>
+
+    <label for="end-date">End Date:</label>
+    <input type="text" id="end-date" value="Present" readonly><br>
+
+    <label for="description">Description:</label>
+    <textarea id="description" rows="3" readonly>Led business development efforts, generating over $31 million in sales revenue while managing key client accounts.</textarea><br>
+
+    <label for="skills">Skills:</label>
+    <input type="text" id="skills" value="Business Development, Account Management, Client Relations, Sales Strategy" readonly><br>
+
+    <label for="documents">Supporting Documents:</label>
+    <input type="file" id="documents"><br><br>
+
+    <h2>Education</h2>
+    <label for="school">School Name:</label>
+    <input type="text" id="school" value="University of Hartford" readonly><br>
+
+    <label for="degree">Degree Type:</label>
+    <input type="text" id="degree" value="Bachelor's Degree" readonly><br>
+
+    <label for="field-of-study">Field of Study:</label>
+    <input type="text" id="field-of-study" value="Economics and Finance" readonly><br>
+
+    <label for="edu-start-date">Start Date:</label>
+    <input type="text" id="edu-start-date" value="September 2008" readonly><br>
+
+    <label for="edu-end-date">End Date:</label>
+    <input type="text" id="edu-end-date" value="May 2012" readonly><br>
+
+    <label for="gpa">GPA:</label>
+    <input type="text" id="gpa" value="3.39" readonly><br>
+
+    <label for="edu-description">Description:</label>
+    <textarea id="edu-description" rows="4" readonly>Focused on economic theory, financial analysis, and business strategies. Completed independent research projects in finance.</textarea><br>
+
+    <label for="edu-documents">Supporting Documents:</label>
+    <input type="file" id="edu-documents"><br><br>
+
+    <h2>Skills</h2>
+    <input type="text" value="Business Development, Account Management, Client Relations, Sales Strategy, Lean Management, CNC Manufacturing" readonly><br><br>
+
+    <button type="submit">Submit Profile</button>
+</div>
+
+<script>
+    // Load uploaded profile image
+    function loadImage(event) {
+        const image = document.getElementById('profile-image');
+        image.src = URL.createObjectURL(event.target.files[0]);
+    }
+</script>
+
+</body>
+</html>

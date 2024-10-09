@@ -3,47 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Employer Profile</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Company Profile Form - Jobster</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .satellite-offices {
+            margin-bottom: 20px;
+        }
+    </style>
+    <script>
+        function addSatelliteOffice() {
+            const container = document.getElementById('satellite-offices-container');
+            const input = document.createElement('input');
+            input.type = 'text';
+            input.placeholder = 'City, State';
+            input.className = 'form-group';
+            container.appendChild(input);
+        }
+    </script>
 </head>
 <body>
-    <header>
-        <h1>Create Employer Profile</h1>
-    </header>
-    
-    <main>
-        <form id="employer-profile-form" action="submit-profile" method="POST" enctype="multipart/form-data">
-            <!-- Company Name -->
-            <label for="company-name">Company Name:</label>
-            <input type="text" id="company-name" name="company-name" required><br><br>
+    <div class="container">
+        <h1>Company Profile Form</h1>
 
-            <!-- Address -->
-            <label for="address">Company Address:</label>
-            <textarea id="address" name="address" rows="3" required></textarea><br><br>
+        <form>
+            <div class="form-group">
+                <label for="company-name">Company Name</label>
+                <input type="text" id="company-name" placeholder="Enter company name">
+            </div>
 
-            <!-- Industry -->
-            <label for="industry">Industry:</label>
-            <input type="text" id="industry" name="industry" required><br><br>
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" rows="4" placeholder="Enter a brief description (600 characters or less)"></textarea>
+            </div>
 
-            <!-- Company Logo -->
-            <label for="logo">Company Logo:</label>
-            <input type="file" id="logo" name="logo" accept="image/*" required><br><br>
+            <div class="form-group">
+                <label for="website">Website</label>
+                <input type="url" id="website" placeholder="Enter company website">
+            </div>
 
-            <!-- Number of Employees -->
-            <label for="num-employees">Number of Employees:</label>
-            <input type="number" id="num-employees" name="num-employees" required><br><br>
+            <div class="form-group">
+                <label for="main-office">Main Office</label>
+                <input type="text" id="main-office" placeholder="Enter main office location (City, State)">
+            </div>
 
-            <!-- Company Description -->
-            <label for="description">Company Description:</label>
-            <textarea id="description" name="description" rows="5" required></textarea><br><br>
+            <div class="form-group satellite-offices">
+                <label for="satellite-offices">Satellite Offices</label>
+                <div id="satellite-offices-container">
+                    <input type="text" class="form-group" placeholder="City, State">
+                </div>
+                <button type="button" onclick="addSatelliteOffice()">Add Another Office</button>
+            </div>
 
-            <!-- Submit Button -->
-            <button type="submit">Create Profile</button>
+            <div class="form-group">
+                <label for="phone-number">Phone Number</label>
+                <input type="tel" id="phone-number" placeholder="Enter company phone number">
+            </div>
+
+            <div class="form-group">
+                <label for="company-size">Company Size</label>
+                <select id="company-size">
+                    <option value="">Select company size</option>
+                    <option value="1-10">1-10 employees</option>
+                    <option value="11-50">11-50 employees</option>
+                    <option value="51-200">51-200 employees</option>
+                    <option value="201-500">201-500 employees</option>
+                    <option value="501-1000">501-1000 employees</option>
+                    <option value="1000+">1000+ employees</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="founded">Founded</label>
+                <input type="number" id="founded" placeholder="Enter year founded">
+            </div>
+
+            <div class="form-group">
+                <label for="industry">Industry</label>
+                <input type="text" id="industry" placeholder="Enter industry (e.g., Cyber Security, Manufacturing)">
+            </div>
+
+            <div class="form-group">
+                <label for="industry-serve">Industry They Serve</label>
+                <input type="text" id="industry-serve" placeholder="Enter industries served">
+            </div>
+
+            <button type="submit">Submit Profile</button>
         </form>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Jobster. All rights reserved.</p>
-    </footer>
+    </div>
 </body>
 </html>

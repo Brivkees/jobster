@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Seeker Profile</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <script>
+        // Function to add more job experience
+        function addExperience() {
+            const experienceSection = document.getElementById('experience-section');
+            const newExperience = document.createElement('div');
+            newExperience.innerHTML = `
+                <h4>Additional Job Experience</h4>
+                <label for="job-title">Job Title:</label>
+                <input type="text" name="job-title" placeholder="e.g., Regional Sales Manager"><br><br>
+                <label for="employment-type">Employment Type:</label>
+                <select name="employment-type">
+                    <option value="full-time">Full-Time</option>
+                    <option value="part-time">Part-Time</option>
+                    <option value="self-employed">Self-Employed</option>
+                    <option value="freelance">Freelance</option>
+                    <option value="contract">Contract</option>
+                    <option value="internship">Internship</option>
+                    <option value="apprenticeship">Apprenticeship</option>
+                    <option value="seasonal">Seasonal</option>
+                </select><br><br>
+                <label for="company">Company Name:</label>
+                <input type="text" name="company" placeholder="Company Name"><br><br>
+                <label for="job-location">Location:</label>
+                <input type="text" name="job-location" placeholder="City, State or Remote"><br><br>
+                <label for="start-date">Start Date:</label>
+                <input type="month" name="start-date"><br>
+                <label for="end-date">End Date:</label>
+                <input type="month" name="end-date" placeholder="or Present"><br><br>
+                <label for="description">Job Description (300 characters max):</label><br>
+                <textarea name="description" rows="3" maxlength="300" placeholder="Describe your role..."></textarea><br><br>
+                <label for="skills">Skills:</label><br>
+                <input type="text" name="skills" placeholder="Enter relevant skills"><br><br>
+                <label for="documents">Supporting Documents:</label>
+                <input type="file" name="documents"><br><br>
+            `;
+            experienceSection.appendChild(newExperience);
+        }
+
+        // Function to add more education
+        function addEducation() {
+            const educationSection = document.getElementById('education-section');
+            const newEducation = document.createElement('div');
+            newEducation.innerHTML = `
+                <h4>Additional Education</h4>
+                <label for="school-name">School Name:</label>
+                <input type="text" name="school-name" placeholder="e.g., University of Hartford"><br><br>
+                <label for="degree-type">Degree Type:</label>
+                <input type="text" name="degree-type" placeholder="e.g., Bachelor's Degree"><br><br>
+                <label for="field-of-study">Field of Study:</label>
+                <input type="text" name="field-of-study" placeholder="e.g., Economics and Finance"><br><br>
+                <label for="education-start-date">Start Date:</label>
+                <input type="month" name="education-start-date"><br>
+                <label for="education-end-date">End Date:</label>
+                <input type="month" name="education-end-date"><br><br>
+                <label for="gpa">GPA:</label>
+                <input type="text" name="gpa" placeholder="Optional"><br><br>
+                <label for="education-description">Description (600 characters max):</label><br>
+                <textarea name="education-description" rows="4" maxlength="600" placeholder="Describe your education..."></textarea><br><br>
+                <label for="education-documents">Supporting Documents:</label>
+                <input type="file" name="education-documents"><br><br>
+            `;
+            educationSection.appendChild(newEducation);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Create Your Jobster Profile</h1>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="about-companies.html">About Jobster for Companies</a> |
+            <a href="about-seekers.html">About Jobster for Seekers</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Job Seeker Profile</h2>
+
+            <!-- Profile Picture Upload -->
+            <label for="profile-pic">Profile Picture:</label>
+            <input type="file" id="profile-pic" name="profile-pic"><br><br>
+
+            <!-- Name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name"><br><br>
+
+            <!-- Location & Willingness to Relocate -->
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" placeholder="City, State"><br>
+            <input type="checkbox" id="relocate" name="relocate">
+            <label for="relocate">Willing to Relocate</label><br><br>
+
+            <!-- Contact Information -->
+            <label for="contact">Contact Information:</label><br>
+            <input type="email" id="email" name="email" placeholder="Email Address"><br>
+            <input type="tel" id="phone" name="phone" placeholder="Phone Number"><br><br>
+
+            <!-- About Section -->
+            <label for="about">About You (600 characters max):</label><br>
+            <textarea id="about" name="about" rows="4" maxlength="600" placeholder="Write a brief summary about yourself..."></textarea><br><br>
+
+            <!-- Experience Section -->
+            <h3>Experience</h3>
+            <div id="experience-section">
+                <label for="job-title">Job Title:</label>
+                <input type="text" name="job-title" placeholder="e.g., Regional Sales Manager"><br><br>
+
+                <label for="employment-type">Employment Type:</label>
+                <select name="employment-type">
+                    <option value="full-time">Full-Time</option>
+                    <option value="part-time">Part-Time</option>
+                    <option value="self-employed">Self-Employed</option>
+                    <option value="freelance">Freelance</option>
+                    <option value="contract">Contract</option>
+                    <option value="internship">Internship</option>
+                    <option value="apprenticeship">Apprenticeship</option>
+                    <option value="seasonal">Seasonal</option>
+                </select><br><br>
+
+                <label for="company">Company Name:</label>
+                <input type="text" name="company" placeholder="Company Name"><br><br>
+
+                <label for="job-location">Location:</label>
+                <input type="text" name="job-location" placeholder="City, State or Remote"><br><br>
+
+                <label for="start-date">Start Date:</label>
+                <input type="month" name="start-date"><br>
+
+                <label for="end-date">End Date:</label>
+                <input type="month" name="end-date" placeholder="or Present"><br><br>
+
+                <label for="description">Job Description (300 characters max):</label><br>
+                <textarea name="description" rows="3" maxlength="300" placeholder="Describe your role..."></textarea><br><br>
+
+                <label for="skills">Skills:</label><br>
+                <input type="text" name="skills" placeholder="Enter relevant skills"><br><br>
+
+                <label for="documents">Supporting Documents:</label>
+                <input type="file" name="documents"><br><br>
+            </div>
+            <button type="button" onclick="addExperience()">Add More Experience</button><br><br>
+
+            <!-- Education Section -->
+            <h3>Education</h3>
+            <div id="education-section">
+                <label for="school-name">School Name:</label>
+                <input type="text" name="school-name" placeholder="e.g., University of Hartford"><br><br>
+
+                <label for="degree-type">Degree Type:</label>
+                <input type="text" name="degree-type" placeholder="e.g., Bachelor's Degree"><br><br>
+
+                <label for="field-of-study">Field of Study:</label>
+                <input type="text" name="field-of-study" placeholder="e.g., Economics and Finance"><br><br>
+
+                <label for="education-start-date">Start Date:</label>
+                <input type="month" name="education-start-date"><br>
+
+                <label for="education-end-date">End Date:</label>
+                <input type="month" name="education-end-date"><br><br>
+
+                <label for="gpa">GPA:</label>
+                <input type="text" name="gpa" placeholder="Optional"><br><br>
+
+                <label for="education-description">Description (600 characters max):</label><br>
+                <textarea name="education-description" rows="4" maxlength="600" placeholder="Describe your education..."></textarea><br><br>
+
+                <label for="education-documents">Supporting Documents:</label>
+                <input type="file" name="education-documents"><br><br>
+            </div>
+            <button type="button" onclick="addEducation()">Add More Education</button><br><br>
+
+        </section>
+    </main>
+</body>
+</html>

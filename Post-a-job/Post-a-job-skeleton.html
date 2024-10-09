@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Job - Jobster</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Post a Job</h1>
+
+        <div class="form-group">
+            <label for="company-name">Company Name:</label>
+            <a href="company-profile.html" target="_blank">Google</a> <!-- Link to company page -->
+        </div>
+
+        <div class="form-group">
+            <label for="job-location">Job Location:</label>
+            <input type="text" id="job-location" placeholder="Enter job location (e.g., New York, NY)">
+        </div>
+
+        <div class="form-group">
+            <label for="job-description">Job Description (600 characters or less):</label>
+            <textarea id="job-description" rows="4" maxlength="600" placeholder="Describe the job role..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="industry-serving">Industry Serving:</label>
+            <input type="text" id="industry-serving" placeholder="e.g., Technology, Finance, Healthcare">
+        </div>
+
+        <div class="form-group">
+            <label for="years-experience">Years of Experience Required:</label>
+            <select id="years-experience">
+                <option value="0-1">0-1 Years</option>
+                <option value="2-3">2-3 Years</option>
+                <option value="4-5">4-5 Years</option>
+                <option value="6-10">6-10 Years</option>
+                <option value="10+">10+ Years</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="language-required">Language(s) Required:</label>
+            <input type="text" id="language-required" placeholder="e.g., English, Spanish">
+        </div>
+
+        <div class="form-group">
+            <label for="certificates-required">Certificates Required:</label>
+            <input type="text" id="certificates-required" placeholder="e.g., PMP, AWS Certified Solutions Architect">
+        </div>
+
+        <div class="form-group">
+            <label for="team-size">Size of Team:</label>
+            <input type="number" id="team-size" placeholder="Enter the size of the team">
+        </div>
+
+        <div class="form-group">
+            <label for="salary-range">Salary Range:</label>
+            <input type="text" id="Salary Range" placeholder="Enter the salary range">
+
+        <div class="form-group">
+            <label for="accepted-prompt">Once Accepted Prompt (600 characters or less):</label>
+            <textarea id="accepted-prompt" rows="4" maxlength="600" placeholder="Enter the prompt for the candidate after acceptance..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <input type="checkbox" id="supporting-documents" onclick="toggleDocumentsField()">
+            <label for="supporting-documents">Supporting Documents Required (no cover letters allowed)</label>
+        </div>
+
+        <div class="form-group" id="documents-group" style="display: none;">
+            <label for="documents-list">List Supporting Documents Required:</label>
+            <textarea id="documents-list" rows="3" placeholder="e.g., Resume, Portfolio, Certifications"></textarea>
+        </div>
+
+        <button type="submit">Post Job</button>
+    </div>
+
+    <script>
+        function toggleDocumentsField() {
+            const documentsGroup = document.getElementById('documents-group');
+            const checkbox = document.getElementById('supporting-documents');
+            if (checkbox.checked) {
+                documentsGroup.style.display = 'block';
+            } else {
+                documentsGroup.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -12,17 +12,23 @@
         <p>Select your portal: Employer or Job Seeker</p>
         <nav>
             <a href="index.html">Home</a> |
-            <a href="#employer">For Employers</a> |
-            <a href="#job-seeker">For Job Seekers</a>
+            <a href="#about-companies">About Jobster for Companies</a> | <!-- New link added -->
+            <a href="#about-seekers">About Jobster for Seekers</a> |   <!-- New link added -->
+            <a href="Costing breakdown for all">Costing breakdown for all</a> | <!-- New link added -->
+            <button id="login-button">Login</button>
         </nav>
     </header>
 
     <main>
+
         <!-- Employer Section -->
         <section id="employer">
             <h2>Employer Portal</h2>
             <p>Welcome employers! Here you can manage job postings, search for candidates, and more.</p>
             <button onclick="alert('This is the Employer section. Features coming soon!')">Get Started as Employer</button>
+            
+            <!-- Sync LinkedIn Company Button -->
+            <button id="sync-linkedin-company">Sync LinkedIn Company Page</button>
         </section>
 
         <hr>
@@ -32,6 +38,9 @@
             <h2>Job Seeker Portal</h2>
             <p>Looking for your next opportunity? Here, job seekers can find jobs, apply, and create profiles.</p>
             <button onclick="alert('This is the Job Seeker section. Features coming soon!')">Get Started as Job Seeker</button>
+            
+            <!-- Sync LinkedIn User Button -->
+            <button id="sync-linkedin-user">Sync LinkedIn Profile</button>
         </section>
     </main>
 
@@ -40,13 +49,19 @@
     </footer>
 
     <script>
-        // Example of what you can do with JavaScript, customize as needed
-        document.querySelector('#employer button').addEventListener('click', function() {
-            window.location.href = "employer-dashboard.html";  // Placeholder for future employer page
+        // Redirect to LinkedIn OAuth for syncing company page
+        document.getElementById('sync-linkedin-company').addEventListener('click', function() {
+            window.location.href = "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&scope=r_liteprofile%20r_emailaddress%20w_member_social%20rw_organization_admin";
         });
 
-        document.querySelector('#job-seeker button').addEventListener('click', function() {
-            window.location.href = "job-seeker-dashboard.html";  // Placeholder for future job seeker page
+        // Redirect to LinkedIn OAuth for syncing user profile
+        document.getElementById('sync-linkedin-user').addEventListener('click', function() {
+            window.location.href = "https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&scope=r_liteprofile%20r_emailaddress";
+        });
+
+        // Redirect to login page
+        document.getElementById('login-button').addEventListener('click', function() {
+            window.location.href = "login.html";  // Placeholder for future login page
         });
     </script>
 </body>
